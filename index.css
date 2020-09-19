@@ -1,0 +1,22 @@
+body {
+    background-color: lightblue;
+    margin-left: 20%;
+    margin-right: 20%;
+  }
+  
+  h1,h2,h3 {
+    color: white;
+    text-align: center;
+  }
+
+  
+  p {
+    font-family: verdana;
+    font-size: 20px;
+    text-align: center;
+  }
+
+  .rules{
+    border-style: dashed;
+    border-color: white;
+  }
