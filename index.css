@@ -19,7 +19,7 @@ body {
   .rules{
     border-style: dashed;
     border-color: white;
-    width: 160px; 
+    width: 200px; 
     position: fixed;
     z-index: 1;
     top: 0; 
