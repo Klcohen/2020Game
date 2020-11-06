@@ -18,13 +18,14 @@
     <p>You pick between 2-3 choices. Your decision will impact the outcome of the game. There are XXX outcomes of the game- see if you can find them all.
         All scenarios are based on firefighter training and meant to improve your decision-making skills</p>
 </div> -->
-
+<div><h3>Make Your Choice before the time runs out <span id="time">01:30</span></h3></div>
 <div class="scenario">
     <h2>Scenario</h2>
     <p> Before heading out to the fire, you decide to check your personal equipment. You pull out your tools onto the ground and see the following image:
     </p>
     <img src="Assets/equipment.png" alt="equipment">
 </div>
+
 
 <h2>What will you do?</h2>
 
@@ -48,5 +49,31 @@
 
 </div>
 
+
+<script>
+function startTimer(duration, display) {
+    var timer = duration, minutes, seconds;
+    setInterval(function () {
+        minutes = parseInt(timer / 60, 10);
+        seconds = parseInt(timer % 60, 10);
+
+        minutes = minutes < 10 ? "0" + minutes : minutes;
+        seconds = seconds < 10 ? "0" + seconds : seconds;
+
+        display.textContent = minutes + ":" + seconds;
+
+        if (--timer < 0) {
+            window.location.replace("index.html");
+
+        }
+    }, 1000);
+}
+
+window.onload = function () {
+    var NinetySec = 60 * .9,
+        display = document.querySelector('#time');
+    startTimer(NinetySec, display);
+};
+</script>
 </body>
 </html>
